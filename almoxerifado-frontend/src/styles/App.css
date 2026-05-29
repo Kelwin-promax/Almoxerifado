@@ -1,0 +1,494 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* Login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-card h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.login-card button {
+    width: 100%;
+    padding: 12px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.login-card button:hover {
+    background: #5a67d8;
+}
+
+.erro-mensagem {
+    color: #e53e3e;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.info-acessos {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    background: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-brand h2 {
+    color: #667eea;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    background: #667eea;
+    color: white;
+}
+
+.navbar-user {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.navbar-user span {
+    color: #667eea;
+    font-weight: bold;
+}
+
+.btn-logout {
+    background: #e53e3e;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-logout:hover {
+    background: #c53030;
+}
+
+/* Container Principal */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+/* Header Actionss */
+.header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header-actions h1 {
+    color: white;
+}
+
+/* Filtros */
+.filtros {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filtro-input {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Tabela */
+.data-table {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.data-table th {
+    background: #667eea;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+}
+
+.data-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.data-table tr:hover {
+    background: #f7fafc;
+}
+
+/* Botoes */
+.btn-primary {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+}
+
+.btn-edit {
+    background: #48bb78;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 0.25rem;
+}
+
+.btn-delete {
+    background: #e53e3e;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 0.25rem;
+}
+
+.btn-mov {
+    background: #ed8936;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 0.25rem;
+}
+
+.btn-secondary {
+    background: #a0aec0;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-clear {
+    background: #718096;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.acoes {
+    white-space: nowrap;
+}
+
+/* CaRDS (Dashboard) */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 3rem;
+}
+
+.card-info h3 {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #667eea;
+}
+
+.card-perfil {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #667eea;
+}
+
+/* Últimos produtos (Dashboard) */
+.ultimos-produtos {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.ultimos-produtos h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Paginaçao */
+.paginacao {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+.paginacao button {
+    padding: 0.5rem 1rem;
+    background: white;
+    color: #667eea;
+    border: 1px solid #667eea;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.paginacao button:hover:not(:disabled) {
+    background: #667eea;
+    color: white;
+}
+
+.paginacao button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.paginacao span {
+    color: white;
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    min-width: 400px;
+    max-width: 500px;
+}
+
+.modal-content h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.modal-content textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    justify-content: flex-end;
+}
+
+/* Formulrio da movimentaçao */
+.mov-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.produto-info {
+    background: #f7fafc;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.mensagem {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background: #48bb78;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .navbar-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .content {
+        padding: 0 1rem;
+    }
+
+    .data-table {
+        font-size: 12px;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 0.5rem;
+    }
+
+    .modal-content {
+        min-width: 90%;
+        margin: 1rem;
+    }
+
+    .filtros {
+        flex-direction: column;
+    }
+
+    .filtro-input {
+        width: 100%;
+    }
+}
